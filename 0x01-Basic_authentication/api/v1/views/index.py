@@ -29,6 +29,6 @@ def stats() -> str:
 @app_views.route('/unauthorized', methods=['GET'])
 def trigger_unauthorized() -> str:
     """
-    Testing unauthorised trigger
+    Testing unauthorized trigger
     """
     abort(401)
