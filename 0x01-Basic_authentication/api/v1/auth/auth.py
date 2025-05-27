@@ -16,16 +16,23 @@ class Auth:
         """
         return False
 
-    def authorization_header(self, request=None) -> str:
+    def authorization_header(self, request=None) -> None:
         """
         Return the authorization header from the request.
         Currently, returns None.
         """
         return None
 
-    def current_user(self, request=None) -> TypeVar('User'):
+    def current_user(self, request=None) -> None:
         """
         Return the current user based on the request.
         Currently, returns None.
         """
         return None
+
+if __name__ == "__main__":
+    a = Auth()
+
+    print(a.require_auth("/api/v1/status/", ["/api/v1/status/"]))
+    print(a.authorization_header())
+    print(a.current_user())
