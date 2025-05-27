@@ -36,7 +36,6 @@ class Auth:
 
         return request.headers.get("Authorization", None)
 
-
     def current_user(self, request=None) -> None:
         """
         Return the current user based on the request.
