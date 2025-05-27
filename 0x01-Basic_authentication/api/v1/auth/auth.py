@@ -9,7 +9,7 @@ from typing import List, TypeVar
 
 class Auth:
     """ Class to manage the API authentication """
-    
+
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
         Determine whether a given path requires authentication.
@@ -30,6 +30,7 @@ class Auth:
         Currently, returns None.
         """
         return None
+
 
 if __name__ == "__main__":
     a = Auth()
