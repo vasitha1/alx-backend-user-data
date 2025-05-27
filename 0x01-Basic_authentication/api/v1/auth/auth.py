@@ -29,12 +29,14 @@ class Auth:
                 return False
         return True
 
-    def authorization_header(self, request=None) -> None:
+    def authorization_header(self, request=None) -> Optional[str]:
         """
         Return the authorization header from the request.
-        Currently, returns None.
         """
-        return None
+        if request is None:
+            return None
+        auth_header = request.headers.get('Authorization')
+        return auth_header
 
     def current_user(self, request=None) -> None:
         """
